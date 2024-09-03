@@ -1,0 +1,29 @@
+config:
+  target: https://www.saucedemo.com/
+  engines:
+    playwright:
+      launchOptions:
+        headless: false
+      testIdAttribute: data-test
+  processor: "add-to-cart.runner.ts"
+  phases:
+  - name: 1userPer3Second
+    arrivalRate: 1
+    duration: 3
+  payload:
+    path: './data/users.csv'
+    order: sequence
+    loadAll: true
+    skipHeader: true
+    fields:
+    - "username"
+#before:
+#  flow:
+#  - function: beforeTest
+#after:
+#  flow:
+#  - function: afterTest
+scenarios:
+- name: "Add to cart load test"
+  engine: "playwright"
+  testFunction: "addToCartTest"

@@ -1,0 +1,12 @@
+{
+  "name": "Artillery-Playwright-Demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^22.5.2",
+    "artillery": "^2.0.20"
+  },
+  "scripts": {}
+}
