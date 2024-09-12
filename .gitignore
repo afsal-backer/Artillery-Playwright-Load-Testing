@@ -6,3 +6,6 @@ node_modules/
 .vscode/settings.json
 .DS_Store
 LICENSE
+.env
+test-run-report.json
+test-run-report.json.html

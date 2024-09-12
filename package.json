@@ -1,5 +1,5 @@
 {
-  "name": "Artillery-Playwright-Demo",
+  "name": "artillery-playwright-demo",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -8,5 +8,12 @@
     "@types/node": "^22.5.2",
     "artillery": "^2.0.20"
   },
-  "scripts": {}
+  "scripts": {
+    "playwright-test": "yarn playwright test tests/cart/add-to-cart.spec.ts --headed",
+    "local-test": "artillery run --output test-run-report.json './artillery/cart/add-to-cart.yml'",
+    "fargate-single": "artillery run-fargate --region eu-west-2 './artillery/cart/add-to-cart.yml'",
+    "fargate-multiple": "artillery run-fargate --region eu-west-2 --count 3 './artillery/cart/add-to-cart.yml'",
+    "report": "artillery report test-run-report.json"
+  },
+  "packageManager": "yarn@1.22.22"
 }

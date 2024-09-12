@@ -8,7 +8,7 @@ export const loginButton = (page: Page) => page.getByTestId("login-button")
 
 // Helpers
 
-export async function loginToSauceLabs(page: Page, context?: any){
+export async function loginToSauceLabs(page: Page){
     await userNameField(page).fill('standard_user');
     await passwordField(page).fill('secret_sauce');
     await loginButton(page).click();
