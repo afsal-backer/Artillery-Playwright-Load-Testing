@@ -1,15 +1,32 @@
 config:
   target: https://www.saucedemo.com/
+
   engines:
     playwright:
       launchOptions:
         headless: false
       testIdAttribute: data-test
+
   processor: "add-to-cart.runner.ts"
+
   phases:
   - name: 2usersPerSecondFor5Seconds
-    duration: 5
     arrivalRate: 2
+    duration: 5
+
+  # - name: RampUp
+  #   arrivalRate: 1
+  #   duration: 15
+  #   rampTo: 3
+
+  # - name: 2usersIn6Seconds
+  #   arrivalCount: 2
+  #   duration: 6
+  #   rampTo: 3
+
+
+
+
 scenarios:
 - name: "Add to cart load test"
   engine: "playwright"
