@@ -6,6 +6,8 @@ This project demonstrates how to perform frontend load testing using Artillery a
 
 The project is set up to load test the [Sauce Demo](https://www.saucedemo.com/) website, specifically the "Add to Cart" functionality. It uses Playwright to automate browser interactions and Artillery to manage the load testing scenarios.
 
+IMPORTANT: Only perform load testing on websites you have full control of. Saucedemo is used here as an example with very minimal load.
+
 ## Features
 
 - Load testing with Artillery
