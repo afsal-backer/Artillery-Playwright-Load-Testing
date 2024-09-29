@@ -1,4 +1,4 @@
-# Artillery Playwright Demo
+# Artillery Playwright Load Testing
 
 This project demonstrates how to perform frontend load testing using Artillery and Playwright. It combines the power of Artillery for generating load and Playwright for browser automation to test web applications under various load conditions.
 
